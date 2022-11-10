@@ -1,0 +1,115 @@
+:root{
+    --tomato:tomato;
+    --fontP:monospace;
+    --cBeige:beige;
+    --sFontP:1.6rem;
+    --sFontS:1.2rem;
+    --primFont:4.8rem;
+    --seconFont:2.4rem;
+    --marg: 2rem;
+    --bordSmall: 0.5rem ;
+    --bordMed: 2rem ;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: monospace;
+}
+
+#timer-container {
+    width: 100%;
+	height: 92vh;
+    overflow-y: hidden;
+    display: grid;
+    place-items: center;
+    background-color: var(--tomato);
+    
+}
+
+.container-t {
+    background-color:var(--cBeige);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+    width: 50rem;
+    border-radius:var(--bordMed);
+    
+
+}
+
+.title {
+    color:var(--tomato);
+    font-size:var(--primFont) ;
+    margin: var(--marg);
+
+}
+
+
+main {
+    display: flex;
+    background-color: var(--tomato);
+    height: 88vh;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.options{
+    font-size: 2.6rem;
+    display: grid;
+    cursor: pointer;
+    top: 0;
+    grid-template-columns: repeat(3, minmax(100px, 200px));
+    
+    list-style: none;
+    padding-bottom: var(--marg) ;
+}
+
+.options li{
+    background-color: var(--tomato);
+    border-radius: var(--bordSmall);
+    margin: var(--marg) 1rem;
+    padding: 0.3rem;
+}
+#timer {
+    background-color: var(--tomato);
+    font-size: var(--primFont);
+    margin: var(--marg);
+    padding: var(--marg);
+    border-radius: var(--bordSmall);
+}
+#start {
+    font-size: var(--primFont);
+    background-color: black;
+    color: var(--tomato);
+    border-radius: var(--bordMed);
+    margin-top:var(--marg);
+    padding: 0 var(--marg);
+    cursor: pointer;
+}
+
+@media (max-width: 761px){
+    .container-t{
+        background:var(--tomato);
+        width: auto;
+    }
+
+    #timer {
+        background:var(--cBeige);
+    }
+    .title { 
+        color:var(--cBeige);
+    }
+    .options li{ 
+        background:var(--cBeige);
+        font-size: var(--sFontP);
+    }
+}
+
