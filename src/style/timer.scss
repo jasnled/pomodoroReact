@@ -1,30 +1,8 @@
-:root{
-    --tomato:tomato;
-    --fontP:monospace;
-    --cBeige:beige;
-    --sFontP:1.6rem;
-    --sFontS:1.2rem;
-    --primFont:4.8rem;
-    --seconFont:2.4rem;
-    --marg: 2rem;
-    --bordSmall: 0.5rem ;
-    --bordMed: 2rem ;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
-    font-family: monospace;
-}
+@import 'vars';
 
 #timer-container {
     width: 100%;
-	height: 92vh;
+	height: 90vh;
     overflow-y: hidden;
     display: grid;
     place-items: center;
@@ -64,7 +42,7 @@ main {
 .options{
     font-size: 2.6rem;
     display: grid;
-    cursor: pointer;
+    
     top: 0;
     grid-template-columns: repeat(3, minmax(100px, 200px));
     
@@ -73,26 +51,40 @@ main {
 }
 
 .options li{
+    color: var(--gray);
+    cursor: pointer;
     background-color: var(--tomato);
     border-radius: var(--bordSmall);
     margin: var(--marg) 1rem;
     padding: 0.3rem;
 }
+
+.options li:hover{
+    transform: translateY(5px);
+    background-color: var(--tomatoTouch);
+}
+
 #timer {
     background-color: var(--tomato);
     font-size: var(--primFont);
     margin: var(--marg);
     padding: var(--marg);
     border-radius: var(--bordSmall);
+    color:var(--gray)
 }
 #start {
     font-size: var(--primFont);
-    background-color: black;
+    background-color:var(--gray);
     color: var(--tomato);
     border-radius: var(--bordMed);
     margin-top:var(--marg);
     padding: 0 var(--marg);
     cursor: pointer;
+}
+
+#start:hover{
+    background-color: var(--grayTouch);
+    transform: scale(1.04);
 }
 
 @media (max-width: 761px){
@@ -102,7 +94,8 @@ main {
     }
 
     #timer {
-        background:var(--cBeige);
+        background:var(--tomato);
+        color:var(--cBeige);
     }
     .title { 
         color:var(--cBeige);
@@ -110,6 +103,12 @@ main {
     .options li{ 
         background:var(--cBeige);
         font-size: var(--sFontP);
+        color:var(--tomato);
+        
     }
+    .options li:hover{
+        background-color: rgba(245, 245, 220, 0.733);
+        transform: translateY(5px);
+    } 
 }
 

@@ -1,0 +1,44 @@
+@import 'vars';
+
+.box-tasks-done .container-tasks-done{
+    margin-bottom: 10px;
+    justify-self: center;
+}
+
+.box .task-done-title{
+
+    border-bottom: 1px solid var(--cBeige);
+    font-size: var(--sFontP);
+    justify-items: left;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns:3fr 1fr;
+    grid-template-rows: 1fr
+
+}
+
+.box-tasks-done{
+    display: flex;
+    grid-row: 2 / 3 ;
+}
+
+.task-done-title button{
+    padding: 4px;
+    color:var(--gray);
+    border: 1px solid var(--cBeige);
+    background-color: var(--tomato);
+    border-radius: var(--bordSmall);
+    font-size: var(--sFontS);
+    margin-left: 50px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.task-element button:hover{
+    background-color:var(--tomatoTouch);
+}
+
+.task-done-title button:hover{
+    background-color: var(--tomatoTouch);
+    transform: scale(1.05);
+}

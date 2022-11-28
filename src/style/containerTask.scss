@@ -1,0 +1,29 @@
+@import 'vars';
+
+.box{
+
+    display: flex;
+    flex-direction: column;
+    padding:var(--bordSmall) ;
+    color:var(--cBeige);
+    font-size: var(--sFontS);
+    border: 5px solid beige;
+    border-radius: 20px;   
+}
+
+.box >span {
+
+    border-bottom: 1px solid var(--cBeige);
+    font-size: var(--sFontP);
+    justify-items: center;
+    margin-bottom: 20px;
+    
+}
+.task-element button{
+    color:var(--gray);
+
+}
+.task-element button:hover{
+    background-color:var(--tomatoTouch);
+    transform: translateY(3px);
+}

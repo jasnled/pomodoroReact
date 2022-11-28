@@ -1,54 +1,45 @@
-:root{
-    --tomato:tomato;
-    --fontP:monospace;
-    --cBeige:beige;
-    --sFontP:1.6rem;
-    --sFontS:1.2rem;
-    --primFont:4.8rem;
-    --seconFont:2.4rem;
-    --marg: 2rem;
-    --bordSmall: 0.5rem ;
-    --bordMed: 2rem ;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%;
-    font-family: monospace;
-}
+@import 'vars';
 
 .menu-container{
-    height: 8vh;
+    height: 10vh;
     background-color: var(--tomato);
+    display: flex;
 }
 
 .menu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-   
-    margin:0 8px;
-    border-bottom: 1px solid black;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    align-content: center;
+    gap: 25px;
+    margin:8px 8px;
+    border-bottom: 1px solid var(--gray);
     
 }
-.menu-item{
+
+.menu-item {
     
-    color: var(black);
+    
     font-size: var(--seconFont);
-    border-radius: var(--bordMed);
-    padding: 1rem 3rem;
-   
-}
-.menu:nth-child(1){
     
+    padding: 1rem 3rem;
+    
+    color: var(--gray);
+    
+    padding: 5px;
+
+}
+.menu-item.report{
+    border: 1px solid var(--gray);
+    border-radius:6px;
+    justify-self:center;
     cursor: pointer;
 }
 
-.menu:nth-child(2){
-    margin-left:1rem;
+.menu-item.report:hover{
+    background-color: var(--tomatoTouch);
+    transform: scale(1.04);
 }
+
+
+

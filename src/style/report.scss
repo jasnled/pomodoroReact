@@ -1,0 +1,120 @@
+@import 'vars';
+
+.container-section{
+    display: grid;
+    position: absolute;
+    padding: minmax(40px,2rem);
+    top:0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(99, 15, 0, 0.575);
+    place-items:center;
+}
+
+
+
+.container{
+
+    border-radius: 8px; 
+    padding: 3rem;
+    margin:0 var(--marg);  
+    width: auto;
+    height:90%;
+    background-color: var(--tomato);
+    grid-auto-flow: column;
+    place-self:center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px,400px));
+    grid-template-rows: auto 600px;
+    gap: 25px;
+}
+
+.box{
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding:var(--bordSmall) ;
+    color:var(--cBeige);
+    font-size: var(--sFontS);
+    border: 5px solid beige;
+    border-radius: 20px; 
+    margin:  var(--bordMed) 0;
+    
+}
+
+
+
+
+
+.box >span {
+
+    border-bottom: 1px solid var(--cBeige);
+    font-size: var(--sFontP);
+    justify-items: center;
+    margin-bottom: 20px;
+}
+
+.task-element{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 15px;
+}
+
+.task-element span{ 
+    grid-column: 1 / 4 ;
+    place-self: center;
+}
+
+.task-element button{
+    padding: 4px;
+    border: 2px solid var(--cBeige);
+    background-color: var(--tomato);
+    border-radius: var(--bordSmall);
+    font-size: var(--sFontS);
+    cursor: pointer;
+}
+
+#icon-close{
+    
+    display: grid;
+    place-content: center;
+    border: 0.5px solid var(--gray);
+    position: absolute;
+    top:5rem;
+    right: 5rem;
+    cursor: pointer;
+    justify-self:end;
+    font-size: var(--seconFont) ;
+    color: white;
+    background-color: rgba(233, 152, 152, 0.20);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    
+}
+
+#icon-close:hover {
+    background-color: rgba(233, 152, 152, 0.40);
+}
+
+@media screen and (max-width:1000px){
+    
+
+    .container{
+        overflow-y: scroll;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 600px 600px
+    
+    }
+
+    .box-tasks-done{
+        grid-column: 1 / 3;
+        grid-row: 3 / 4 ;
+    }
+    .box-tasks{
+        grid-column: 1 / 3;
+        grid-row: 2 / 3 ;
+    }
+}

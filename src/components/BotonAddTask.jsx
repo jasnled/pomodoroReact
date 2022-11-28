@@ -1,32 +1,39 @@
-import React from 'react';
-let arrayTask = [];
+import React, { useContext,useState } from 'react';
+import AppContext from '../context/AppContext';
+
+import "../style/botonAddTask.scss"
+
+
 const BotonAddTask = () => {
-    const input = document.querySelector('.input');
-    bAdd.addEventListener('click', ()=>{
-        console.log(input.value);
-        let iden = false;
+
+    const { 
+        handleAddTask,
+        arrayTask,
+        taskProcess
+    } = useContext(AppContext);
+    const [taskN,setTaskN] = useState("");
+
+    const handleInputChange = ({target}) => {
+        setTaskN(target.value);
         
-    
-        if(input.value != ''){
-            while(!iden){
-                console.log(iden);
-                iden = genId(); 
-                console.log(iden);
-            };
-            
-            arrayTask.push(
-                {taskName:input.value, done:false, id:iden}
-            );
-        }
-        console.log(arrayTask);
-    
-        renderTask();
-    });
+    };
+
+    const handleSubmit = () => {
+        console.log(taskProcess);
+        console.log(`taskprocess`);
+        if(taskProcess == ''){
+
+            handleAddTask(taskN);
+            setTaskN('');
+            console.log(taskN);
+            console.log(arrayTask);
+        };
+    };
 
     return (
-    <div class = "container-input">
-        <input className ="input" type="text" placeholder="enter task"/>
-        <button className = "bAdd" type="submit">add task</button>
+    <div className = "container-input">
+        <input className ="input" value={taskN} onChange = {handleInputChange} type="text" placeholder="enter task"/>
+        <button className = "bAdd" onClick={handleSubmit} type="submit">add task</button>
     </div>
     );
 }

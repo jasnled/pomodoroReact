@@ -6,7 +6,7 @@ const Boton = ({ option}) => {
     const { handleOption } = useContext(AppContext);
 
     return (
-        <li className = "option" id = {option.id} onClick = {()=>{handleOption(option)}}>{option.content} </li>
+        <li className = "option" id = {option.id} onClick = {()=>{handleOption(option)}}>{option.content}</li>
     );
 }
 

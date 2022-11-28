@@ -1,0 +1,26 @@
+:root{
+    --tomato:rgb(44, 139, 127);
+    --fontP:monospace;
+    --cBeige:beige;
+    --sFontP:1.6rem;
+    --sFontS:1.2rem;
+    --primFont:4.8rem;
+    --seconFont:2.4rem;
+    --marg: 2rem;
+    --bordSmall: 0.5rem ;
+    --bordMed: 2rem ;
+    --gray: beige;
+    --grayTouch: rgb(214, 214, 194);
+    --tomatoTouch:rgb(52, 161, 147);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: monospace;
+}

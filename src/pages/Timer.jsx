@@ -13,26 +13,27 @@ const Timer = () => {
     btnStart,
     option,
     options, 
-    handleStart
+    handleStart,
+    taskProcess
     } = useContext(AppContext);
     
 
 
-
+    let elem = {id:taskProcess}
     return (
     <div id="timer-container">
         <div className="container-t">
             <div>
                 <ul className = "options">
-                    {options.map( option => (
-                        <Boton option={option} key = {option.id} />
+                    {options.map( opt => (
+                        <Boton option={opt} key = {opt.id} />
                     ))}
                     
                 </ul>
             </div>
-            <p className="title">{option}</p>
+            <p className="title">{option.content}</p>
             <Time tim = {tim}/>
-            <button id="start" onClick = {() => handleStart(tim)}>{btnStart}</button>
+            <button id="start" onClick = {() => handleStart(option,elem)}>{btnStart}</button>
         </div>
     </div>
     );

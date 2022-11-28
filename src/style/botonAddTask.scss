@@ -1,0 +1,31 @@
+@import 'vars';
+
+.input {
+    padding: 4px;
+    border:none;
+    background-color: var(--cBeige);
+    border-radius: var(--bordSmall);
+    font-size: var(--sFontS);
+
+}
+
+.bAdd{
+    margin-left: 10px;
+    cursor: pointer;
+    padding: 4px;
+    border: 1px solid var(gray);
+    background-color: var(--tomato);
+    border-radius: var(--bordSmall);
+    font-size: var(--sFontS);
+    color:var(--gray);
+
+}
+
+.bAdd:hover{
+    background-color: var(--tomatoTouch);
+    transform: scale(1.05);
+}
+
+.container-input{
+    margin-top: 20px;
+}
